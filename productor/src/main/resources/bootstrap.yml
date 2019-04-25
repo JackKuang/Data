@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: productor
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        service-id: config
+      profile: dev
+eureka:
+  instance:
+    non-secure-port: 8082
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+debug: true
